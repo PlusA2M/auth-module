@@ -13,14 +13,14 @@ auth: {
 }
 ```
 
-By default, **instance names are the same as scheme names**. If you want more flexibility by providing your own scheme or having multiple instances of the same scheme you can use the `_scheme` property:
+By default, **instance names are the same as scheme names**. If you want more flexibility by providing your own scheme or having multiple instances of the same scheme you can use the `scheme` property:
 
 ```js
 auth: {
   strategies: {
-    local1: { _scheme: 'local', /* ... */ },
-    local2: { _scheme: 'local', /* ... */ },
-    custom: { _scheme: '~/app/customScheme', /* ... */ },
+    local1: { scheme: 'local', /* ... */ },
+    local2: { scheme: 'local', /* ... */ },
+    custom: { scheme: '~/app/customScheme', /* ... */ },
   }
 }
 ```
@@ -90,7 +90,7 @@ Then set your new scheme in the auth config.
 auth: {
   strategies: {
     customStrategy: {
-      _scheme: '~/schemes/customScheme',
+      scheme: '~/schemes/customScheme',
       /* ... */
     }
   }
